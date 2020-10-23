@@ -1,0 +1,15 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "pfe testing",
+  "main": "app.js",
+  "dependencies": {
+    "@patternfly/pfe-tabs": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott O'Brien",
+  "license": "ISC"
+}
