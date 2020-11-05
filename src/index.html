@@ -5,37 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script type="module">import '/node_modules/@patternfly/pfe-tabs/dist/pfe-tabs.js';</script>
-    <pfe-tabs pfe-variant="wind" on="light">
-        <pfe-tab slot="tab" role="heading">Tab1</pfe-tab>
-        <pfe-tab-panel slot="panel" role="region">
-            <p>Ea excepteur magna tempor voluptate nisi. Quis non minim consequat culpa ullamco cillum ullamco. Non voluptate aliqua amet labore aliquip non cillum tempor pariatur est id excepteur non ipsum. Duis adipisicing minim sint dolor velit anim laborum est do aliqua ullamco occaecat. Cupidatat minim sunt aliquip enim. Dolor deserunt reprehenderit ad aliquip ea deserunt eiusmod fugiat.</p>
-            <p>Fugiat ipsum aliquip eiusmod sint aute tempor occaecat enim consectetur dolor officia non in pariatur. Irure sit enim cupidatat voluptate fugiat deserunt et in et ad irure consequat. Dolor et reprehenderit in reprehenderit dolor amet et adipisicing.</p>
-            <p>Commodo ipsum laboris ut voluptate nulla reprehenderit excepteur consectetur ullamco eu ullamco consectetur. Aute laboris enim ea non laboris elit. Minim quis consectetur eu et cupidatat eu laborum nulla duis esse. Tempor sit ea occaecat minim occaecat dolor sunt cupidatat consectetur Lorem duis labore fugiat id. Et dolore ullamco aute sint quis. Ut elit nisi aliquip anim sint commodo ea qui ipsum. Quis aute culpa ut nostrud sit nulla eiusmod reprehenderit occaecat.</p>
-            <p>Nisi ut eiusmod elit excepteur proident adipisicing velit mollit occaecat nostrud ut sint laborum irure. Magna adipisicing et veniam fugiat pariatur dolore. Est amet occaecat incididunt commodo nostrud incididunt in elit nisi anim irure cillum duis. Excepteur enim anim laboris magna. Irure mollit nisi magna ad qui adipisicing irure.</p>
-            <pfe-cta>
-                <a href="#">Learn more</a>
-            </pfe-cta>
-        </pfe-tab-panel>
-        <pfe-tab slot="tab" role="heading">Tab2</pfe-tab>
-        <pfe-tab-panel slot="panel" role="region">
-            <p>Excepteur tempor cupidatat ut reprehenderit excepteur consequat proident commodo et nisi velit. Mollit et velit in laboris incididunt laboris deserunt exercitation. Dolore eiusmod sit adipisicing commodo. Lorem in dolore dolor elit exercitation minim ullamco ea proident ut dolore. Nulla proident commodo reprehenderit aute fugiat Lorem. Tempor aliquip eu tempor et Lorem. Id sunt consectetur occaecat est minim ex Lorem labore consectetur dolore.</p>
-            <p>Commodo amet ut ut tempor duis magna pariatur sit ex nostrud do. Sit dolore eiusmod anim fugiat. Voluptate minim anim dolor Lorem ullamco proident ea aliquip culpa ea excepteur ullamco Lorem sint. Laboris nostrud exercitation qui id deserunt est adipisicing commodo velit. Nisi excepteur consectetur excepteur tempor. Anim culpa duis aliqua non.</p>
-            <p>Proident minim consectetur dolore velit et incididunt anim cillum. Fugiat sint Lorem proident adipisicing laboris laborum eiusmod exercitation nulla velit quis excepteur mollit eu. Amet cupidatat anim nostrud anim fugiat irure eu deserunt. Voluptate qui tempor consectetur aliqua.</p>
-            <pfe-cta>
-                <a href="#">Learn more</a>
-            </pfe-cta>
-        </pfe-tab-panel>
-        <pfe-tab slot="tab" role="heading">tab3</pfe-tab>
-        <pfe-tab-panel slot="panel" role="region">
-            <p>Veniam aliqua dolore esse ad sunt ea Lorem labore eiusmod. Magna consequat velit duis culpa voluptate ipsum excepteur. Consequat nisi fugiat ex proident dolor aute fugiat ipsum. Elit proident duis commodo veniam.</p>
-            <p>Consequat sint eiusmod eu est qui minim mollit deserunt. Qui ex qui adipisicing exercitation ea labore et est eiusmod est. Occaecat aliquip aliquip velit deserunt eu ea Lorem qui nisi anim eu voluptate. Consectetur est quis dolore ut ex ut deserunt consectetur pariatur ut in. Irure commodo cillum nostrud est.</p>
-            <p>Deserunt non aliqua mollit ipsum reprehenderit. Ad commodo est adipisicing laboris consequat dolor. Ipsum amet ex ex Lorem Lorem. Ut consequat incididunt nisi sint cillum et. Velit elit sunt velit qui nulla fugiat ipsum. Non incididunt proident ex sit voluptate sint.</p>
-            <pfe-cta>
-                <a href="#">Learn more</a>
-            </pfe-cta>
-        </pfe-tab-panel>
-    </pfe-tabs>
-</body>
+    <body>
+        <script type="module">import '/src/node_modules/@patternfly/pfe-tabs/dist/pfe-tabs.js';</script>
+        <!--<script src="C:\Users\f49092c\Documents\Dealer Portal_Commercial Services\RtR\src\node_modules\@patternfly\pfe-tabs\dist\pfe-tabs.js"></script> -->
+        <script src="/src/node_modules/@patternfly/pfe-table/dist/pfe-table.umd.js"></script>
+        <script src="/src/node_modules/@patternfly/pfe-table/dist/pfe-table--lightdom.css"></script>
+
+        <p>Table test</p>
+        <pfe-table id="table-1"></pfe-table>
+        <script>
+        customElements.whenDefined("pfe-table").then(function() {
+            const table1 = document.querySelector("#table-1");
+            table1.columnDefs = [{"headerName":"Make","field":"make","sortable":true},{"headerName":"Model","field":"model","sortable":true},{"headerName":"Price","field":"price","sortable":true}];
+            table1.rowData = [{"make":"Toyota","model":"Celica","price":35000},{"make":"Ford","model":"Mondeo","price":32000},{"make":"Toyota","model":"Celica","price":35000},{"make":"Ford","model":"Mondeo","price":32000},{"make":"Toyota","model":"Celica","price":35000},{"make":"Ford","model":"Mondeo","price":32000},{"make":"Toyota","model":"Celica","price":35000},{"make":"Ford","model":"Mondeo","price":32000},{"make":"Toyota","model":"Celica","price":35000},{"make":"Ford","model":"Mondeo","price":32000},{"make":"Porsche","model":"Boxter","price":72000}];
+        })
+        </script>
+
+        <p>Tabs test</p>
+        <pfe-tabs>
+            <pfe-tab role="heading" slot="tab">Tab 1</pfe-tab>
+            <pfe-tab-panel role="region" slot="panel">
+            <h2>Content 1</h2>
+            <p>Tab 1 panel content.</p>
+            </pfe-tab-panel>
+            <pfe-tab role="heading" slot="tab">Tab 2</pfe-tab>
+            <pfe-tab-panel role="region" slot="panel">
+            <h2>Content 2</h2>
+            <p>Tab 2 panel content.</p>
+            </pfe-tab-panel>
+        </pfe-tabs>
+    </body>
 </html>

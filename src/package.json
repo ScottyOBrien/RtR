@@ -4,6 +4,7 @@
   "description": "pfe testing",
   "main": "app.js",
   "dependencies": {
+    "@patternfly/pfe-table": "^2.3.0",
     "@patternfly/pfe-tabs": "^2.3.0"
   },
   "devDependencies": {},
